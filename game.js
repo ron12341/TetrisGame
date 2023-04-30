@@ -420,7 +420,10 @@ function displayHoldTetromino() {
 		holdTetromino.x = 1;
 		holdTetromino.y = 1;
 
-		if (holdTetromino instanceof I) holdTetromino.x = 0.5;
+		if (holdTetromino instanceof I) {
+			holdTetromino.x = 0.5;
+			holdTetromino.y = 0.5;
+		}
 
 		holdTetromino.draw(holdContext);
 	}
@@ -435,7 +438,10 @@ function displayNextTetromino() {
 	nextTetromino.x = 1;
 	nextTetromino.y = 1;
 
-	if (nextTetromino instanceof I) nextTetromino.x = 0.5;
+	if (nextTetromino instanceof I) {
+		nextTetromino.x = 0.5;
+		nextTetromino.y = 0.5;
+	}
 
 	nextTetromino.draw(nextContext);
 }
@@ -574,7 +580,7 @@ startGame_btn.addEventListener('click', function () {
 });
 
 restart_btn.addEventListener('click', function () {
-    clearInterval(timeInterval);
+	clearInterval(timeInterval);
 	initializeVariables();
 	restart_btn.blur();
 
