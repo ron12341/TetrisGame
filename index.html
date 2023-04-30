@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="game.js" defer></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>Tetris Game</title>
+	</head>
+	<body>
+		<img id="i-img" src="./images/I_Tetromino.webp" style="display: none" />
+		<img id="j-img" src="./images/J_Tetromino.webp" style="display: none" />
+		<img id="l-img" src="./images/L_Tetromino.webp" style="display: none" />
+		<img id="o-img" src="./images/O_Tetromino.webp" style="display: none" />
+		<img id="s-img" src="./images/S_Tetromino.webp" style="display: none" />
+		<img id="z-img" src="./images/Z_Tetromino.webp" style="display: none" />
+		<img id="t-img" src="./images/T_Tetromino.webp" style="display: none" />
+
+		<div class="startGameScreen">
+			<button id="startGame-btn">Start Game</button>
+		</div>
+
+		<div class="gameOverScreen">
+			<span id="gameOverText">GAME OVER!</span>
+		</div>
+
+		<div class="gameContainer">
+			<div class="holdCanvasContainer" style="margin: 20px; position: relative">
+				<h1 style="color: white; text-align: center">Hold</h1>
+				<canvas id="holdCanvas"></canvas>
+				<div class="controls">
+					<h3 style="margin-bottom: 10px">Controls:</h3>
+					<p>Move left : Left arrow</p>
+					<p>Move right : Right arrow</p>
+					<p>Move down : Down arrow</p>
+					<p>Rotate : Up arrow</p>
+					<p>Instant Drop : Spacebar</p>
+					<p>Hold/switch : c</p>
+				</div>
+			</div>
+
+			<canvas id="gameCanvas"></canvas>
+
+			<div class="nextCanvasContaner" style="margin: 20px; position: relative">
+				<h1 style="color: white; text-align: center">Next</h1>
+				<canvas id="nextCanvas"></canvas>
+
+				<h1 id="score" style="color: white; margin-top: 30px">Score: 0</h1>
+				<h2 id="gameLevel" style="color: white; margin-top: 20px">Level: 1</h2>
+
+				<button id="restart-btn">
+					<svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+						<use class="ytp-svg-shadow" xlink:href="#ytp-id-73"></use>
+						<path
+							class="ytp-svg-fill"
+							d="M 18,11 V 7 l -5,5 5,5 v -4 c 
+                            3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 -3.3,0 -6,-2.7 -6,-6 h -2 
+                            c 0,4.4 3.6,8 8,8 4.4,0 8,-3.6 8,-8 0,-4.4 -3.6,-8 -8,-8 z"
+							id="ytp-id-73"
+						></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+	</body>
+</html>
